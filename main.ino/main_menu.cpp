@@ -37,8 +37,8 @@ void handleMainMenu() {
 	display.display();
 
 	if (pressJoystick()) {
+		tone(PIN_BUZZER, 220, 200);
 		delay(500);
-		Serial.println("Button pressed!");
 		state = options[menuIndex];
 	}
 

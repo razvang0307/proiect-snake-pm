@@ -23,6 +23,12 @@ void loop(){
     case STATE_PAUSE_MENU:
       handlePauseMenu();
       break;
+    case STATE_GAME_OVER:
+      handleGameOver();
+      break;
+    case STATE_SETTINGS:
+      handleSettings();
+      break;
     default:
       break;
   }

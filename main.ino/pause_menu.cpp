@@ -34,7 +34,7 @@ void handlePauseMenu() {
 
 	display.setCursor(10, 25);
 	display.print((pauseMenuIndex == 1) ? "> " : " ");
-	display.println("Restart Game");
+	display.println("Restart");
 
 	display.setCursor(10, 35);
 	display.print((pauseMenuIndex == 2) ? "> " : " ");
@@ -44,6 +44,7 @@ void handlePauseMenu() {
 
 	if (pressJoystick()) {
 		delay(150);
+		tone(PIN_BUZZER, 220, 200);
 		if (pauseMenuIndex >= 1) {
 			gameInitialized = false;
 		}

@@ -9,8 +9,8 @@ uint8_t readJoystick() {
 	int x = analogRead(PIN_STICK_X);
 	if (y > THRESHOLD_TOP ) dir |= DOWN;
 	else if (y < THRESHOLD_BOT) dir |= UP;
-	if (x > THRESHOLD_TOP) dir |= LEFT;
-	else if (x < THRESHOLD_BOT) dir |= RIGHT;
+	if (x > THRESHOLD_TOP) dir |= RIGHT;
+	else if (x < THRESHOLD_BOT) dir |= LEFT;
 	return dir;
 }
 
